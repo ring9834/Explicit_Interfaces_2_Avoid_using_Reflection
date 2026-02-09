@@ -15,6 +15,7 @@ public class OrderProcessor : IProcessor
         Console.WriteLine("Processing order");
     }
 }
+
 // Common reflection anti-pattern
 if (obj.GetType().GetMethod("Process") != null)
 {
@@ -33,7 +34,7 @@ if (obj is IProcessor processor)
 
 2.To hide interface members from the public API of the concrete class
 
-3. To enforce programming against the interface (not concrete class)
+3.To enforce programming against the interface (not concrete class)
 
 ## Alternative ways
 Default interface methods (C# 8+) or static abstract members (C# 11+) can solve the problem cleaner.
